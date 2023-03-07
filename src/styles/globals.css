@@ -8,26 +8,43 @@
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  /* Main colours */
+  --schiphol-blue: #141251;
+  --afternoon-blue: #1b60db;
+  --seebuyfly-yellow: #f9c900;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(to bottom right, rgba(1, 65, 255, 0), rgba(1, 65, 255, 0), rgba(1, 65, 255, 0.3));
+  /* Secondary colours */
+  --morning-pink: #aa3191;
+  --lightmorning-pink: #ff8fb2;
+  --lightmorning-blue: #94b0ea;
+  --dusk-green: #027e9b;
+  --dusk-blue: #25d7f4;
+  --evening-pink: #6552a8;
+  --evening-lilac: #d285d6;
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(#ffffff80, #ffffff40, #ffffff30, #ffffff20, #ffffff10, #ffffff10, #ffffff80);
+  /* Greys */
+  --black: #000;
+  --grey-storm: #706a8a;
+  --grey-overcast: #9491aa;
+  --grey-broken: #bfbdcc;
+  --grey-scattered: #eae9ee;
+  --grey-few: #f2f1f4;
+  --white: #fff;
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  /* Signal colours */
+  --dark-red: #d0021b;
+  --green: #128a0b;
+  --light-blue: #eef6ff;
+  --light-green: #d0e8cf;
+  --light-yellow: #fdfbda;
+
+  /* Domain gradients */
+  --gradient-flights: linear-gradient(90deg, #a35bcd 0%, #1b60db 80%);
+  --gradient-parking: linear-gradient(90deg, #d472bc 0%, #1b60db 80%);
+  --gradient-at-schiphol: linear-gradient(90deg, #d472bc 0%, #1b60db 80%);
+  --gradient-more: linear-gradient(90deg, #6892ea 0%, #1b60db 80%);
+  --gradient-privium: linear-gradient(90deg, #027e9b 40%, #1b60db 90%);
 }
 
 *,
@@ -63,4 +80,17 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

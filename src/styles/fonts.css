@@ -1,0 +1,6 @@
+@font-face {
+  font-display: fallback;
+  font-family: "Neue Frutiger";
+  src: local("Neue Frutiger"),
+    url("https://cdn.schiphol.nl/dist/fonts/c8ed451b-424c-4574-87d8-58c9ab0c1053.woff2") format("woff2");
+}
