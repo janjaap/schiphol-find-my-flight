@@ -71,6 +71,8 @@ export function FindAFlight() {
     setFlightDate(value);
     setDateError('');
 
+    if (!value) return;
+
     if (!validity.valid) {
       setDateError('Voer een datum in volgens het format YYYY-MM-DD');
       return;
