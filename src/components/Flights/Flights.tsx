@@ -47,17 +47,26 @@ export const Flights = ({ flights, criteria }: Props) => {
               <p>Aantal gevonden vluchten: {flights.length}</p>
             </div>
 
-            <div>
-              <button className={styles['flights-list-sort-button']} onClick={onSort}>
-                Sorteer {sort === 'asc' ? <>&uarr;</> : <>&darr;</>}
-              </button>
-            </div>
+            {criteria?.flightDate && flights.length > 1 && (
+              <div>
+                <button className={styles['flights-list-sort-button']} onClick={onSort}>
+                  Sorteer {sort === 'asc' ? <>&uarr;</> : <>&darr;</>}
+                </button>
+              </div>
+            )}
           </div>
 
           <ul className={styles['flights-list']}>
             {flights.sort(sortByExpectedTime).map((flight) => (
               <li className={styles['flights-list-card']} key={flight.flightIdentifier}>
-                <div className={styles['flights-list-card__section']}>{flight.expectedTime}</div>
+                <div className={styles['flights-list-card__section']}>
+                  {flight.expectedTime}
+                  {!criteria?.flightDate && (
+                    <div>
+                      {new Date(flight.date).toLocaleDateString('nl-NL', { timeZone: 'UTC', dateStyle: 'medium' })}
+                    </div>
+                  )}
+                </div>
                 <div className={styles['flights-list-card__section']}>
                   <strong className={styles['flights-list-card__airport']}>{flight.airport}</strong>
                   {flight.flightNumber}
