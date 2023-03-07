@@ -1,12 +1,9 @@
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import { Header } from '@/components/Header/Header';
 import { Hero } from '@/components/Hero/Hero';
 import { useFlights } from '@/providers/FlightsProvider';
 import { Flights } from '@/components/Flights/Flights';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   const { flights, criteria } = useFlights();
