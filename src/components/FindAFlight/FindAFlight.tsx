@@ -2,12 +2,13 @@ import { useState } from 'react';
 
 import type { ChangeEvent, FormEvent } from 'react';
 
-import { useFetchFlights } from '@/hooks/useFetchFlights/useFetchFlights';
-import { useFlights } from '@/providers/FlightsProvider';
 import { Fieldset } from '../Fieldset/Fieldset';
 import { Input } from '../Input/Input';
 import { Label } from '../Label/Label';
 import styles from './FindAFlight.module.css';
+
+import { useFlights } from '@/providers/FlightsProvider';
+import { useFetchFlights } from '@/hooks/useFetchFlights/useFetchFlights';
 
 const getDateParts = (value: string) => value.split('-').map((val) => Number.parseInt(val, 10));
 
