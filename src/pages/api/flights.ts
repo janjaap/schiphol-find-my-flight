@@ -1,4 +1,4 @@
-import { Flight } from '@/types/Flight';
+import type { Flight } from '@/types/Flight';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {

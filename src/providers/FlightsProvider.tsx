@@ -1,5 +1,6 @@
-import { createContext, PropsWithChildren, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
+import type { PropsWithChildren } from 'react';
 import type { Criteria } from '@/types/Criteria';
 import type { Flight } from '@/types/Flight';
 

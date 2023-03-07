@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
+import type { ChangeEvent, FormEvent } from 'react';
+
 import { useFetchFlights } from '@/hooks/useFetchFlights/useFetchFlights';
 import { useFlights } from '@/providers/FlightsProvider';
-import { ChangeEvent, FormEvent, useState } from 'react';
 import { Fieldset } from '../Fieldset/Fieldset';
 import { Input } from '../Input/Input';
 import { Label } from '../Label/Label';

@@ -1,6 +1,8 @@
+import { useState } from 'react';
+
+import type { MouseEvent } from 'react';
 import type { Criteria } from '@/types/Criteria';
 import type { Flight } from '@/types/Flight';
-import { MouseEvent, useState } from 'react';
 
 import styles from './Flights.module.css';
 
